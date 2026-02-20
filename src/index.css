@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 15%;
+
+    /* Arduino teal #00979D → HSL(182, 100%, 30%) */
+    --primary: 182 100% 30%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 182 20% 95%;
+    --secondary-foreground: 182 100% 25%;
+
+    --muted: 210 20% 96%;
+    --muted-foreground: 220 10% 50%;
+
+    --accent: 182 30% 92%;
+    --accent-foreground: 182 100% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 90%;
+    --input: 220 15% 90%;
+    --ring: 182 100% 30%;
+
+    --radius: 0.75rem;
+
+    /* Arduino-specific tokens */
+    --arduino-teal: 182 100% 30%;
+    --arduino-teal-light: 182 60% 95%;
+    --arduino-teal-mid: 182 80% 45%;
+    --section-alt: 210 30% 98%;
+    --card-shadow: 0 4px 20px -4px hsl(182 100% 30% / 0.12);
+    --card-shadow-hover: 0 12px 32px -4px hsl(182 100% 30% / 0.22);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 182 100% 30%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .section-alt {
+    background-color: hsl(var(--section-alt));
+  }
+
+  .arduino-gradient {
+    background: linear-gradient(135deg, hsl(182 100% 30% / 0.08) 0%, hsl(0 0% 100%) 60%);
+  }
+
+  .arduino-gradient-hero {
+    background: linear-gradient(160deg, hsl(182 100% 30% / 0.12) 0%, hsl(182 60% 97%) 40%, hsl(0 0% 100%) 100%);
+  }
+
+  .card-shadow {
+    box-shadow: var(--card-shadow);
+  }
+
+  .card-shadow-hover {
+    box-shadow: var(--card-shadow-hover);
+  }
+
+  .text-arduino {
+    color: hsl(var(--arduino-teal));
+  }
+
+  .bg-arduino {
+    background-color: hsl(var(--arduino-teal));
+  }
+
+  .border-arduino {
+    border-color: hsl(var(--arduino-teal));
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.4s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.4s ease-out forwards;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,82 @@
+API Error: AuthenticationError: 401 Incorrect API key provided: sk-proj-******************************************************************************************************************************************************2DAA. You can find your API key at https://platform.openai.com/account/api-keys.
+    at APIError.generate (C:\Users\USER\Desktop\arduino-launchpad-main\server\node_modules\openai\error.js:48:20)
+    at OpenAI.makeStatusError (C:\Users\USER\Desktop\arduino-launchpad-main\server\node_modules\openai\core.js:302:33)
+    at OpenAI.makeRequest (C:\Users\USER\Desktop\arduino-launchpad-main\server\node_modules\openai\core.js:346:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\USER\Desktop\arduino-launchpad-main\server\server.js:282:26 {
+  status: 401,
+  headers: {
+    'alt-svc': 'h3=":443"; ma=86400',
+    'cf-cache-status': 'DYNAMIC',
+    'cf-ray': '9d0630adaba83106-HYD',
+    connection: 'keep-alive',
+    'content-length': '408',
+    'content-type': 'text/plain',
+    date: 'Thu, 19 Feb 2026 13:42:54 GMT',
+    server: 'cloudflare',
+    'set-cookie': '__cf_bm=d6mVmm7_lyK07keEMvO7YmkMZZilEXnOQEhl7JlxZG0-1771508574.3447654-1.0.1.1-BddrDfiVm8t1.gTztBHpxMSkwEm6ad3_cwf0cGHD_J5TEz7rufsYlU0oc0sMa.IoifaFfKM8CKOcJ5ZtnLRAcnLYlzile__fBRwdxMNH3ePC1DznM5qpCYEnEGtS1.tp; HttpOnly; Secure; Path=/; Domain=api.openai.com; Expires=Thu, 19 Feb 2026 14:12:54 GMT, _cfuvid=csjBKddlcYkprUqZkNH4RPzronn44T839qjzBX7Zu4o-1771508574.3447654-1.0.1.1-04UXx7qPAzNcbB_vIT82dOQKnHCg16mmz6nZh2TauGc; HttpOnly; SameSite=None; Secure; Path=/; Domain=api.openai.com',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains; preload',
+    'x-content-type-options': 'nosniff',
+    'x-datadog-parent-id': '14517337183402297916',
+    'x-datadog-sampling-priority': '0',
+    'x-datadog-trace-id': '7152481817423130551',
+    'x-error-json': 'ewogICJlcnJvciI6IHsKICAgICJtZXNzYWdlIjogIkluY29ycmVjdCBBUEkga2V5IHByb3ZpZGVkOiBzay1wcm9qLSoqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKjJEQUEuIFlvdSBjYW4gZmluZCB5b3VyIEFQSSBrZXkgYXQgaHR0cHM6Ly9wbGF0Zm9ybS5vcGVuYWkuY29tL2FjY291bnQvYXBpLWtleXMuIiwKICAgICJ0eXBlIjogImludmFsaWRfcmVxdWVzdF9lcnJvciIsCiAgICAiY29kZSI6ICJpbnZhbGlkX2FwaV9rZXkiLAogICAgInBhcmFtIjogbnVsbAogIH0sCiAgInN0YXR1cyI6IDQwMQp9',
+    'x-openai-authorization-error': '401',
+    'x-openai-ide-error-code': 'invalid_api_key',
+    'x-openai-internal-caller': 'unknown_through_ide',
+    'x-openai-proxy-wasm': 'v0.1',
+    'x-request-id': 'req_fa80c623e7b14b59b665c701195c8dfb'
+  },
+  request_id: 'req_fa80c623e7b14b59b665c701195c8dfb',
+  error: {
+    message: 'Incorrect API key provided: sk-proj-******************************************************************************************************************************************************2DAA. You can find your API key at https://platform.openai.com/account/api-keys.',
+    type: 'invalid_request_error',
+    code: 'invalid_api_key',
+    param: null
+  },
+  code: 'invalid_api_key',
+  param: null,
+  type: 'invalid_request_error'
+}
+OpenAI auth failed. Returning local fallback guide.
+API Error: AuthenticationError: 401 Incorrect API key provided: sk-proj-******************************************************************************************************************************************************2DAA. You can find your API key at https://platform.openai.com/account/api-keys.
+    at APIError.generate (C:\Users\USER\Desktop\arduino-launchpad-main\server\node_modules\openai\error.js:48:20)
+    at OpenAI.makeStatusError (C:\Users\USER\Desktop\arduino-launchpad-main\server\node_modules\openai\core.js:302:33)
+    at OpenAI.makeRequest (C:\Users\USER\Desktop\arduino-launchpad-main\server\node_modules\openai\core.js:346:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\USER\Desktop\arduino-launchpad-main\server\server.js:282:26 {
+  status: 401,
+  headers: {
+    'alt-svc': 'h3=":443"; ma=86400',
+    'cf-cache-status': 'DYNAMIC',
+    'cf-ray': '9d06313ba99d79f2-HYD',
+    connection: 'keep-alive',
+    'content-length': '408',
+    'content-type': 'text/plain',
+    date: 'Thu, 19 Feb 2026 13:43:17 GMT',
+    server: 'cloudflare',
+    'set-cookie': '__cf_bm=54HKpn1rsmmVIBPv9cTDmg.hH_sZZc8ikpPG6QMFSFo-1771508597.062633-1.0.1.1-vfTnIKlZ48VDX1ibkBLwrGLlr2bDD_lDjUbGWK2hY0nZNB4ct8VhviQsOitgxdb13IMWjiFIOCPlQPM1jwPabFmaN1hCOPQMK5nuJ9ezP0W9Kn4RAMlz4wjk6jf94nEy; HttpOnly; Secure; Path=/; Domain=api.openai.com; Expires=Thu, 19 Feb 2026 14:13:17 GMT, _cfuvid=nX6WdChCaCrgz67cQHX9cdItMzKCTdYxiZnxeZGlQDQ-1771508597.062633-1.0.1.1-W8c3522Tat5L6RjBDBTgBxC_kVkc3.s6l4C5yP3KL78; HttpOnly; SameSite=None; Secure; Path=/; Domain=api.openai.com',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains; preload',
+    'x-content-type-options': 'nosniff',
+    'x-datadog-parent-id': '17740116910144026745',
+    'x-datadog-sampling-priority': '0',
+    'x-datadog-trace-id': '1394188555281247381',
+    'x-error-json': 'ewogICJlcnJvciI6IHsKICAgICJtZXNzYWdlIjogIkluY29ycmVjdCBBUEkga2V5IHByb3ZpZGVkOiBzay1wcm9qLSoqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKjJEQUEuIFlvdSBjYW4gZmluZCB5b3VyIEFQSSBrZXkgYXQgaHR0cHM6Ly9wbGF0Zm9ybS5vcGVuYWkuY29tL2FjY291bnQvYXBpLWtleXMuIiwKICAgICJ0eXBlIjogImludmFsaWRfcmVxdWVzdF9lcnJvciIsCiAgICAiY29kZSI6ICJpbnZhbGlkX2FwaV9rZXkiLAogICAgInBhcmFtIjogbnVsbAogIH0sCiAgInN0YXR1cyI6IDQwMQp9',
+    'x-openai-authorization-error': '401',
+    'x-openai-ide-error-code': 'invalid_api_key',
+    'x-openai-internal-caller': 'unknown_through_ide',
+    'x-openai-proxy-wasm': 'v0.1',
+    'x-request-id': 'req_1f037109200e4552befe6f416585d8fb'
+  },
+  request_id: 'req_1f037109200e4552befe6f416585d8fb',
+  error: {
+    message: 'Incorrect API key provided: sk-proj-******************************************************************************************************************************************************2DAA. You can find your API key at https://platform.openai.com/account/api-keys.',
+    type: 'invalid_request_error',
+    code: 'invalid_api_key',
+    param: null
+  },
+  code: 'invalid_api_key',
+  param: null,
+  type: 'invalid_request_error'
+}
+OpenAI auth failed. Returning local fallback guide.
