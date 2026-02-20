@@ -1,58 +1,30 @@
 
-**Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Arduino Launchpad – AI-Powered Project Guide Generator
+📌 Project Overview
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Arduino Launchpad is a full-stack web application that generates structured, beginner-friendly Arduino project guides based on selected sensors and output devices.
 
-Follow these steps:
+The system intelligently:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Accepts selected hardware components
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Determines compatibility
 
-# Step 3: Install the necessary dependencies.
-npm i
+Generates a complete step-by-step Arduino project guide
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Produces ready-to-paste Arduino IDE code
 
-**Edit a file directly in GitHub**
+Falls back to a locally generated guide if OpenAI is unavailable
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+This project demonstrates:
 
-**Use GitHub Codespaces**
+Full-stack development (React + Node.js)
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+AI integration using OpenAI API
 
-## What technologies are used for this project?
+Structured prompt engineering
 
-This project is built with:
+Error handling & fallback logic
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Hardware-oriented code generation    
