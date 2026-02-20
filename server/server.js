@@ -405,6 +405,13 @@ app.post('/api/generate', async (req, res) => {
         console.log('Selected sensors:', selectedSensors);
         console.log('Selected outputs:', selectedOutputs);
 
+        if (selectedSensors.length === 0 || selectedOutputs.length === 0) {
+            return res.status(400).json({
+                error:
+                    'Select at least one input sensor and at least one output device before generating a project guide.',
+            });
+        }
+
         const cacheKey = buildCacheKey(selectedSensors, selectedOutputs);
         const promptCache = loadPromptCache();
         const cachedEntry = promptCache.entries[cacheKey];

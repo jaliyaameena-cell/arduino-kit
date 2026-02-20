@@ -29,13 +29,12 @@ const renderSensorImage = (src: string, alt: string) => (
 
 const MOISTURE_SENSOR_IMAGE_URL =
   "https://img.drz.lazcdn.com/static/np/p/cbc9d33c72719f20ea9e40e0b6e4d408.jpg_720x720q80.jpg_.webp";
-const DISTANCE_SENSOR_IMAGE_URL = "https://cdn-shop.adafruit.com/970x728/3942-00.jpg";
+const DISTANCE_SENSOR_IMAGE_URL = "/sensors/distance-sensor-hc-sr04.jpg";
 const LIGHT_SENSOR_IMAGE_URL =
   "https://fluxworkshop.com/cdn/shop/products/8b7836a6-882d-4691-9532-0f4bd3b42826_300x300.jpg?v=1598564706";
 const MOTION_SENSOR_IMAGE_URL =
   "https://i0.wp.com/www.datasheethub.com/wp-content/uploads/2022/10/HC-SR501-PIR-Motion-Sensor-Module.png?fit=1280%2C720&ssl=1";
-const FLOW_SENSOR_IMAGE_URL =
-  "https://cdn-shop.adafruit.com/970x728/828-02.jpg";
+const FLOW_SENSOR_IMAGE_URL = "/sensors/flow-sensor-yf-s201.jpg";
 const BUZZER_IMAGE_URL =
   "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Piezo_buzzer.jpg/320px-Piezo_buzzer.jpg";
 const LCD_IMAGE_URL = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LCD_16x2.jpg/320px-LCD_16x2.jpg";
@@ -222,18 +221,23 @@ const SensorSection = ({ onSensorsSelected }: SensorSectionProps) => {
     });
   };
 
+  const inputSensors = sensors.filter((s) => s.group === "input");
+  const outputDevices = sensors.filter((s) => s.group === "output");
+  const selectedInputs = inputSensors.filter((s) => selected.has(s.id)).length;
+  const selectedOutputs = outputDevices.filter((s) => selected.has(s.id)).length;
+  const canGenerateProject = selectedInputs > 0 && selectedOutputs > 0;
+
   const handleLetsDoProject = () => {
+    if (!canGenerateProject) {
+      return;
+    }
+
     const selectedNames = sensors.filter((s) => selected.has(s.id)).map((s) => s.name);
     onSensorsSelected(selectedNames);
     setTimeout(() => {
       document.getElementById("project")?.scrollIntoView({ behavior: "smooth" });
     }, 50);
   };
-
-  const inputSensors = sensors.filter((s) => s.group === "input");
-  const outputDevices = sensors.filter((s) => s.group === "output");
-  const selectedInputs = inputSensors.filter((s) => selected.has(s.id)).length;
-  const selectedOutputs = outputDevices.filter((s) => selected.has(s.id)).length;
 
   return (
     <section id="sensors" className="py-24 arduino-gradient">
@@ -300,14 +304,20 @@ const SensorSection = ({ onSensorsSelected }: SensorSectionProps) => {
         </div>
 
         <div className="text-center">
-          {selected.size === 0 && (
-            <p className="text-sm text-muted-foreground mb-4">Select at least one sensor to continue</p>
+          {!canGenerateProject && (
+            <p className="text-sm text-muted-foreground mb-4">
+              {selectedInputs === 0 && selectedOutputs === 0
+                ? "Select at least one input sensor and one output device to continue"
+                : selectedInputs === 0
+                  ? "Select at least one input sensor to continue"
+                  : "Select at least one output device to continue"}
+            </p>
           )}
           <button
             onClick={handleLetsDoProject}
-            disabled={selected.size === 0}
+            disabled={!canGenerateProject}
             className={`inline-flex items-center gap-3 font-semibold px-10 py-4 rounded-full text-base transition-all duration-300 border
-              ${selected.size > 0
+              ${canGenerateProject
                 ? "bg-arduino text-primary-foreground border-arduino hover:bg-arduino/90 hover:shadow-xl hover:shadow-arduino/25 hover:-translate-y-0.5 active:translate-y-0"
                 : "bg-muted text-muted-foreground border-border cursor-not-allowed"
               }

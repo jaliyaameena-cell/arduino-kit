@@ -367,7 +367,7 @@ const ProjectSection = ({ selectedSensors }: ProjectSectionProps) => {
               lower.includes('connection refused'))
           ) {
             message =
-              'Cannot reach the API server. Start backend with `npm run dev:server` (or `npm run dev:all`) and verify port 5000 is running.';
+              'Cannot reach the API server. Start backend with `npm run dev:server` (or `npm run dev:all`) and verify the API URL/port is running.';
           }
 
           if (response.status === 500 && message === 'API error: 500') {
