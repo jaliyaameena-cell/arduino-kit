@@ -11,7 +11,8 @@ interface Sensor {
 }
 
 const DHT11_IMAGE_URL = "https://upload.wikimedia.org/wikipedia/commons/5/51/Dht11.jpg";
-const SENSOR_IMAGE_FALLBACK_URL = "/placeholder.svg";
+const BASE_URL = import.meta.env.BASE_URL;
+const SENSOR_IMAGE_FALLBACK_URL = `${BASE_URL}placeholder.svg`;
 
 const renderSensorImage = (src: string, alt: string) => (
   <img
@@ -29,12 +30,12 @@ const renderSensorImage = (src: string, alt: string) => (
 
 const MOISTURE_SENSOR_IMAGE_URL =
   "https://img.drz.lazcdn.com/static/np/p/cbc9d33c72719f20ea9e40e0b6e4d408.jpg_720x720q80.jpg_.webp";
-const DISTANCE_SENSOR_IMAGE_URL = "/sensors/distance-sensor-hc-sr04.jpg";
+const DISTANCE_SENSOR_IMAGE_URL = `${BASE_URL}sensors/distance-sensor-hc-sr04.jpg`;
 const LIGHT_SENSOR_IMAGE_URL =
   "https://fluxworkshop.com/cdn/shop/products/8b7836a6-882d-4691-9532-0f4bd3b42826_300x300.jpg?v=1598564706";
 const MOTION_SENSOR_IMAGE_URL =
   "https://i0.wp.com/www.datasheethub.com/wp-content/uploads/2022/10/HC-SR501-PIR-Motion-Sensor-Module.png?fit=1280%2C720&ssl=1";
-const FLOW_SENSOR_IMAGE_URL = "/sensors/flow-sensor-yf-s201.jpg";
+const FLOW_SENSOR_IMAGE_URL = `${BASE_URL}sensors/flow-sensor-yf-s201.jpg`;
 const BUZZER_IMAGE_URL =
   "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Piezo_buzzer.jpg/320px-Piezo_buzzer.jpg";
 const LCD_IMAGE_URL = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LCD_16x2.jpg/320px-LCD_16x2.jpg";
